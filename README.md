@@ -16,11 +16,11 @@
 Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false,foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- has_many :tweets
+- has_many :users
 
 
 
@@ -31,10 +31,10 @@ Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|nickname|string|null: false|
+|nickname|string|null: false　foreign_key: true|
 ### Association
 - has_many :tweets
-- has_many :group
+- has_many :groups
 
 
 
@@ -45,7 +45,8 @@ Column|Type|Options|
 |image|text||
 |text|text||
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, |
 ### Association
 - belongs_to :user
-- has_many :group
+- belongs_to　:group
 
