@@ -15,26 +15,23 @@
 ## groupsテーブル
 Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false,foreign_key: true|
-|integer|null: false, foreign_key: true|
+|name|string|null: false,foreign_key: true|
 
 ### Association
 - has_many :tweets
-- has_many :users
-
-
-
-
+- has_many :users, through: :groups_users
+- has_many :groups_users
 
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|nickname|string|null: false　foreign_key: true|
+|nickname|string|null: false|
 ### Association
 - has_many :tweets
-- has_many :groups
+- has_many :groups, through: :groups_users
+- has_many :groups_users
 
 
 
