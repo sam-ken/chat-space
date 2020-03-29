@@ -1,0 +1,57 @@
+.main-chat
+  .main-chat_grpup_header
+    .main-chat_grpup_header_left_box
+      .main-chat_grpup_header_left_box_group
+        test
+      .main-chat_grpup_header_left_box_member
+        member:
+        .main-chat_grpup_header_left_box_member_list
+          kengroup
+    = link_to "#" do
+      .main-chat_grpup_header_edit_btn
+        Edit
+
+  .main-chat_messages
+    .main-chat_messages_message
+      .main-chat_messages_message_upper_info
+        .main-chat_messages_message_upper_info_talker
+          kenji
+        .main-chat_messages_message_upper_info_date
+          2020/03/29(sun)
+      .main-chat_messages_message_text
+        test message
+
+    .main-chat_messages_message
+      .main-chat_messages_message_upper_info
+        .main-chat_messages_message_upper_info_talker
+          kenji
+        .main-chat_messages_message_upper_info_date
+          2020/03/29(sun)
+      .main-chat_messages_message_text
+        test message
+
+    .main-chat_messages_message
+      .main-chat_messages_message_upper_info
+        .main-chat_messages_message_upper_info_talker
+          kenji
+        .main-chat_messages_message_upper_info_date
+          2020/03/29(sun)
+      .main-chat_messages_message_text
+        test message
+
+
+
+  // make form
+  .main-chat_form
+    %form.main-chat_form_new_message
+      // this is message box
+      %input{type: "text", placeholder: "type a message", class: "main-chat_form_new_message_box"} 
+      .main-chat_form_new_message_image
+        
+        %label{class: "main-chat_form_new_message_image_label"}
+          // this is icon's picture
+          = icon('fas', 'image')
+          // this is file btn(display:none)
+        %input{type: "file",class: "main-chat_form_new_message_image_label_file"}
+        //  this is send btn
+      %input{type: "submit", class: "main-chat_form_send_btn", :value => "Send"} 
