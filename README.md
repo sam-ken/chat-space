@@ -11,7 +11,6 @@
 
 
 
-
 ## groupsテーブル
 Column|Type|Options|
 |------|----|-------|
@@ -21,6 +20,8 @@ Column|Type|Options|
 - has_many :tweets
 - has_many :users, through: :groups_users
 - has_many :groups_users
+
+
 
 ## usersテーブル
 |Column|Type|Options|
@@ -47,6 +48,11 @@ Column|Type|Options|
 - belongs_to :user
 - belongs_to　:group
 
+
+
+
+
+
 ## groups_usersテーブル
 
 |Column|Type|Options|
@@ -60,7 +66,6 @@ Column|Type|Options|
 
 
 
-
 ## groupsテーブル
 Column|Type|Options|
 |------|----|-------|
@@ -70,6 +75,8 @@ Column|Type|Options|
 - has_many :tweets
 - has_many :users, through: :groups_users
 - has_many :groups_users
+
+
 
 ## usersテーブル
 |Column|Type|Options|
@@ -81,7 +88,6 @@ Column|Type|Options|
 - has_many :tweets
 - has_many :groups, through: :groups_users
 - has_many :groups_users
-
 
 
 
