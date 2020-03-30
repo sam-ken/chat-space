@@ -46,7 +46,11 @@ Column|Type|Options|
 |group_id|integer|null: false, |
 ### Association
 - belongs_to :user
-- belongs_to　:group
+- belongs_to :group
+
+
+
+
 
 
 
@@ -100,5 +104,5 @@ Column|Type|Options|
 |group_id|integer|null: false, |
 ### Association
 - belongs_to :user
-- belongs_to　:group
+- belongs_to :group
 

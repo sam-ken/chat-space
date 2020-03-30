@@ -2,14 +2,14 @@
   .side-bar_user-name
     .side-bar_user-name_box
       .side-bar_user-name_box_nickname
-        masa
+        = current_user.name
       .side-bar_user-name_box_menu
         .side-bar_user-name_box_menu_new-group
         = link_to "#" do
-          = icon('fas', 'edit', class: "new-group__btn--icon")
+          = icon('fas', 'edit', class: 'icon')
         .side-bar_user-name_box_menu_edit-user
-        = link_to "#" do
-          = icon('fas', 'cog', class: "edit-user__btn--icon")
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog', class: 'icon')
   .side-bar_groups-list
     .side-bar_groups-list_group
       .side-bar_groups-list_group_name
