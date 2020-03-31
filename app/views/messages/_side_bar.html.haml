@@ -5,34 +5,41 @@
         = current_user.name
       .side-bar_user-name_box_menu
         .side-bar_user-name_box_menu_new-group
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('fas', 'edit', class: 'icon')
         .side-bar_user-name_box_menu_edit-user
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'icon')
   .side-bar_groups-list
-    .side-bar_groups-list_group
-      .side-bar_groups-list_group_name
-        ken
-      .side-bar_groups-list_group_message
-        ken
-    .side-bar_groups-list_group
-      .side-bar_groups-list_group_name
-        ken
-      .side-bar_groups-list_group_message
-        ken
-    .side-bar_groups-list_group
-      .side-bar_groups-list_group_name
-        ken
-      .side-bar_groups-list_group_message
-        ken
-    .side-bar_groups-list_group
-      .side-bar_groups-list_group_name
-        ken
-      .side-bar_groups-list_group_message
-        ken
-    .side-bar_groups-list_group
-      .side-bar_groups-list_group_name
-        ken
-      .side-bar_groups-list_group_message
-        ken
+    - current_user.groups.each do |group|
+      .side-bar_groups-list_group
+        = link_to '#' do
+          .side-bar_groups-list_group_name
+            = group.name
+          .side-bar_groups-list_group_message
+            メッセージはまだありません。
+    -# .side-bar_groups-list_group
+    -#   .side-bar_groups-list_group_name
+    -#     ken
+    -#   .side-bar_groups-list_group_message
+    -#     ken
+    -# .side-bar_groups-list_group
+    -#   .side-bar_groups-list_group_name
+    -#     ken
+    -#   .side-bar_groups-list_group_message
+    -#     ken
+    -# .side-bar_groups-list_group
+    -#   .side-bar_groups-list_group_name
+    -#     ken
+    -#   .side-bar_groups-list_group_message
+    -#     ken
+    -# .side-bar_groups-list_group
+    -#   .side-bar_groups-list_group_name
+    -#     ken
+    -#   .side-bar_groups-list_group_message
+    -#     ken
+    -# .side-bar_groups-list_group
+    -#   .side-bar_groups-list_group_name
+    -#     ken
+    -#   .side-bar_groups-list_group_message
+    -#     ken
