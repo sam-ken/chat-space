@@ -13,33 +13,8 @@
   .side-bar_groups-list
     - current_user.groups.each do |group|
       .side-bar_groups-list_group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .side-bar_groups-list_group_name
             = group.name
           .side-bar_groups-list_group_message
-            メッセージはまだありません。
-    -# .side-bar_groups-list_group
-    -#   .side-bar_groups-list_group_name
-    -#     ken
-    -#   .side-bar_groups-list_group_message
-    -#     ken
-    -# .side-bar_groups-list_group
-    -#   .side-bar_groups-list_group_name
-    -#     ken
-    -#   .side-bar_groups-list_group_message
-    -#     ken
-    -# .side-bar_groups-list_group
-    -#   .side-bar_groups-list_group_name
-    -#     ken
-    -#   .side-bar_groups-list_group_message
-    -#     ken
-    -# .side-bar_groups-list_group
-    -#   .side-bar_groups-list_group_name
-    -#     ken
-    -#   .side-bar_groups-list_group_message
-    -#     ken
-    -# .side-bar_groups-list_group
-    -#   .side-bar_groups-list_group_name
-    -#     ken
-    -#   .side-bar_groups-list_group_message
-    -#     ken
+            = group.show_last_message
